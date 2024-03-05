@@ -90,6 +90,14 @@ type Magic in the terminal to check whether it is installed or not.
 
 # Customising the layout by including a custom made inverter cell (sky130_vsdinv) into our layout. #
 
+**Introduction to LEF file**
+For a PnR tool to correctly place and route a block (a macro or a std. cell), it doesn't need to know entire layout information of the block; just the pin positions, PR boundary is sufficient. These minimal and abstracted information is provided to the tool by the Library Exchange Format (LEF) file. LEF file also serves the purpose of protecting intellectual property and is basically of two types:
+
+Cell LEF : Gives the positions of pins, PR boundary and metal layer information
+
+Tech LEF :  information about available metal layer, via information, DRCs of particular technology used by placer and route
+
+
 1. Creating SKY130_vsdinv cell lef file
    * First get the git repository ``vsdstdcelldesign``. Type the following command to get the repository. 
    
